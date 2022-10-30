@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        <form ngNativeValidate>
+            <legend>Cadastro de Aluno: </legend>
+            <div class="col-3">
+                <label>Insira o seu nome:</label>
+                <input type="text" name="nome" [(ngModel)]="nome" [ngClass]="estiloInput" required>
+            </div>
+            <div class="col-3">
+                <label>Insira o seu email:</label>
+                <input type="email" name="email" [(ngModel)]="email" [ngClass]="estiloInput" required>
+            </div>
+            <div class="col-3">
+                <label>Insira o seu telefone:</label>
+                <input type="number" name="telefone" [(ngModel)]="telefone" [ngClass]="estiloInput" required>
+            </div>
+            <div class="col-3">
+                <label>Insira o seu ra:</label>
+                <input type="number" name="ra" [(ngModel)]="ra" [ngClass]="estiloInput" required>
+            </div>
+            <div class="col-6">
+                <label>Resultados:</label>
+                <input type="text" name="resultado" [(ngModel)]="resultado" [ngClass]="estiloInput" disabled>
+            </div>
+            <div class="col-3">
+                <button type="submit" (click)="cadastro()" [ngClass]="estiloBotao">Enviar</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- <p>Número 1: {{num1}}</p>
+<button type="button" [ngClass]="estiloBotao" 
+    [disabled]="inativo" (click)="mudarValorNum1()">Teste</button> -->
+

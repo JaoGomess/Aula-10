@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-3">
+                <label>Insira o valor da AC1:</label>
+                <input type="number" name="valorAc1" placeholder="valorAc1" [(ngModel)]="valorAc1"
+                    [ngClass]="estiloInput">
+            </div>
+            <div class="col-3">
+                <label>Insira o valor da AC2:</label>
+                <input type="number" name="valorAc2" placeholder="valorAc2" [(ngModel)]="valorAc2"
+                    [ngClass]="estiloInput">
+            </div>
+            <div class="col-3">
+                <label>Insira o valor da AG:</label>
+                <input type="number" name="valorAg" placeholder="valorAg" [(ngModel)]="valorAg" [ngClass]="estiloInput">
+            </div>
+            <div class="col-3">
+                <label>Insira o valor da AF:</label>
+                <input type="number" name="valorAf" placeholder="valorAf" [(ngModel)]="valorAf" [ngClass]="estiloInput">
+            </div>
+            <div class="col-3">
+                <label>Valor da Media Final:</label>
+                <input type="text" name="resultado" [(ngModel)]="resultado" [ngClass]="estiloInput" disabled>
+            </div>
+            <div class="col-3">
+                <button (click)="calcularMedia()" [ngClass]="estiloBotao">Calcular</button>
+            </div>
+        </div>
+    </div>
+</div>

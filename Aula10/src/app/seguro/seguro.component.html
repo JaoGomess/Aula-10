@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form>
+                <legend>Seguro Automobilístico</legend>
+                <div class="col-3">
+                    <label>Insira o seu nome:</label>
+                    <input type="text" name="nome" [(ngModel)]="nome" [ngClass]="estiloInput">
+                </div>
+                <div class="col-6">
+                    <label>Selecione o seu sexo:</label>
+                   <div class="col-3" class="form-check">
+                        <input type="radio" name="sexo" [(ngModel)]="sexo" value="M" class="form-check-input"/>
+                        <label for="masc" class="form-check-label"> Masculino</label>
+                   </div>
+                   <div class="col-3" class="form-check">
+                        <input name="sexo" [(ngModel)]="sexo" type="radio" value="F" class="form-check-input"/>
+                        <label for="fem" class="form-check-label"> Feminino</label>
+                   </div>
+                </div>
+                <div class="col-3">
+                    <label>Insira a sua idade:</label>
+                    <input type="number" name="idade" [(ngModel)]="idade" [ngClass]="estiloInput">
+                </div>
+                <div class="col-3">
+                    <label>Insira o valor do automóvel:</label>
+                    <input type="number" name="valorcar" [(ngModel)]="valorcar" [ngClass]="estiloInput">
+                </div>
+                <div class="col-6">
+                    <label>Valor da Apólice de Seguro:</label>
+                   <!--  <input type="number" name="apolice" [ngModel]="apolice" [ngClass]="estiloInput" disabled> -->
+                    <textarea class="form-control" name="apolice" [(ngModel)]="apolice" disabled></textarea>
+                </div>
+                <div class="col-3">
+                    <button type="submit" [ngClass]="estiloBotao" (click)="calcular()">Calcular</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
