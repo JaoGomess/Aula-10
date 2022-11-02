@@ -33,19 +33,15 @@ export class SeguroComponent implements OnInit {
     switch (this.sexo) {
       case "M":
         if (this.idade > 25) {
-          this.apolice = `Nome: ${this.nome}\nApolice: ${this.porcentagem(10, this.valorcar)}`;
+          this.apolice = `Nome: ${this.nome}\nApolice: ${this.valorcar*0.1}`;
         } else if (this.idade <= 25) {
-          this.apolice = `Nome: ${this.nome}\nApolice: ${this.porcentagem(15, this.valorcar)}`;
+          this.apolice = `Nome: ${this.nome}\nApolice: ${this.valorcar*0.15)}`;
         }
       break;
       case "F":
-        this.apolice = `Nome: ${this.nome}\nApolice: ${this.porcentagem(8, this.valorcar)}`;
+        this.apolice = `Nome: ${this.nome}\nApolice: ${this.valorcar*0.8}`;
       break;
     }
-  }
-
-  porcentagem(apolice, valueCar) {
-    return (valueCar *100) / apolice
   }
 
 }
